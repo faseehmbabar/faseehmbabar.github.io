@@ -43,53 +43,32 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<span class="date">Available Now</span>
+									<span class="date">Gaming Photography</span>
 
-									<h1>The Huntsman</h1>
-									<p>A dark fantasy novel about mystery, morality, forgotten memories, and the consequences of choice.</p>
+									<h1>Virtual Worlds, <br />
+									Captured Through My Lens</h1>
+									<p>A collection of cinematic photographs captured throughout the virtual worlds of the games I play.</p>
 								</header>
-
-								<div class="row">
-									<div class="col-4 col-12-small">
-										<span class="image fit">
-											<img src="images/huntsman-cover.jpg" alt="The Huntsman Cover" />
-										</span>
-									</div>
-
-									<div class="col-8 col-12-small">
-										<h2>Synopsis</h2>
-										<p>Thalion, known to the locals as The Huntsman, a lone ranger that wanders the wilds and shadowed roads, taking on contracts while searching for any trace of a man named Lucius Black... a name not uttered or heard by anyone for fourteen years. "The Huntsman" follows Thalion as he stumbles upon a group of recently slain victims in the dark alleys of Umbra. On one of them, he notices a ring. A symbol that unlocks a buried memory, and with it, a long-lost clue about the man he has hunted for years. Little does he know that he is about to step onto a dark and dangerous path that may lead to a carnage the world is neither ready for nor capable of surviving.</p>
-
-										<ul class="actions">
-											<li><a href="https://books.apple.com/us/book/id6793860015" class="button primary">Apple Books</a></li>
-											<li><a href="https://www.kobo.com/ww/en/ebook/the-huntsman-22" class="button">Kobo</a></li>
-											<li><a href="https://www.amazon.com/dp/B0G6TVZNLN" class="button">Amazon</a></li>
-										</ul>
-									</div>
-								</div>
-
-								<h2>More About the Book</h2>
-								<p>The Huntsman is the opening novel of a larger fantasy universe. It combines mystery, dark fantasy, moral conflict, and long-term worldbuilding into a story where every decision carries lasting consequences.</p>
 
 								<hr />
 
-								<h2>Book Information</h2>
-								<ul>
-									<li><strong>Genre:</strong> Dark Fantasy</li>
-									<li><strong>Language:</strong> English</li>
-									<li><strong>Status:</strong> Published</li>
-									<li><strong>Format:</strong> eBook</li>
-								</ul>
+								<!-- Cyberpunk 2077-->
+								 <header>
+									<h2>Cyberpunk 2077</h2>
+									<p>Yo chooms! This here’s a chrome-soaked stash of cinematic stills ripped straight from the neon-soaked streets of Night City, every frame jacked from the virtual grids I run.</p>
+								 </header>
 
-								<h2>Upcoming Novels</h2>
+								 <div id="cyberpunk-gallery"></div>
+								 <hr />
 
-								<div class="box">
-									<h3>The Huntsman : Shadow of War</h3>
-									<p>The next chapter in The Huntsman saga.
-										Coming Soon...
-									</p>
-								</div>
-								
+								 <header>
+								 	<h2>Marvel's Spider-Man 2</h2>
+								 	<p>Hey guys! Check out this stash of cinematic pics I snapped all over New York, every frame captured while I was out web-slinging as your friendly neighborhood Spider-Man.</p>
+								 </header>
+
+								 <div id="spiderman-gallery"></div>
+								 <hr />
+	
 							</section>
 							
 					<!-- Footer -->
@@ -143,14 +122,197 @@
 
 			</div>
 
+		<!-- Lightbox -->
+		<div id="lightbox">
+    		<button id="lightbox-close">&times;</button>
+    		<button id="lightbox-prev">&#10094;</button>
+
+    		<img id="lightbox-image" src="" alt="Expanded photo" />
+
+    		<button id="lightbox-next">&#10095;</button>
+
+    		<div id="lightbox-counter"></div>
+		</div>
+
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<script>
+
+    const galleries = {
+
+        cyberpunk: {
+            photos: [
+                "images/cyberpunk/cyberpunk1.jpg",
+                "images/cyberpunk/cyberpunk2.jpg",
+                "images/cyberpunk/cyberpunk3.jpg",
+                "images/cyberpunk/cyberpunk4.jpg",
+                "images/cyberpunk/cyberpunk5.jpg",
+                "images/cyberpunk/cyberpunk6.jpg",
+                "images/cyberpunk/cyberpunk7.jpg",
+                "images/cyberpunk/cyberpunk8.jpg",
+                "images/cyberpunk/cyberpunk9.jpg",
+                "images/cyberpunk/cyberpunk10.jpg",
+                "images/cyberpunk/cyberpunk11.jpg",
+                "images/cyberpunk/cyberpunk12.jpg",
+                "images/cyberpunk/cyberpunk13.jpg",
+                "images/cyberpunk/cyberpunk14.jpg",
+                "images/cyberpunk/cyberpunk15.jpg",
+                "images/cyberpunk/cyberpunk16.jpg",
+                "images/cyberpunk/cyberpunk17.jpg",
+                "images/cyberpunk/cyberpunk18.jpg",
+                "images/cyberpunk/cyberpunk19.jpg",
+                "images/cyberpunk/cyberpunk20.jpg",
+                "images/cyberpunk/cyberpunk21.jpg"
+            ],
+
+            galleryElement: document.getElementById("cyberpunk-gallery")
+        },
+
+        spiderman: {
+            photos: [
+                "images/spiderman/spiderman1.jpg",
+                "images/spiderman/spiderman2.jpg",
+                "images/spiderman/spiderman3.jpg",
+                "images/spiderman/spiderman4.jpg",
+                "images/spiderman/spiderman5.jpg",
+                "images/spiderman/spiderman6.jpg",
+                "images/spiderman/spiderman7.jpg",
+                "images/spiderman/spiderman8.jpg",
+                "images/spiderman/spiderman9.jpg",
+                "images/spiderman/spiderman10.jpg",
+                "images/spiderman/spiderman11.jpg",
+                "images/spiderman/spiderman12.jpg",
+                "images/spiderman/spiderman13.jpg",
+                "images/spiderman/spiderman14.jpg",
+                "images/spiderman/spiderman15.jpg",
+                "images/spiderman/spiderman16.jpg",
+                "images/spiderman/spiderman17.jpg",
+                "images/spiderman/spiderman18.jpg",
+                "images/spiderman/spiderman19.jpg",
+                "images/spiderman/spiderman20.jpg",
+                "images/spiderman/spiderman21.jpg"
+            ],
+
+            galleryElement: document.getElementById("spiderman-gallery")
+        }
+
+    };
+
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxClose = document.getElementById("lightbox-close");
+    const lightboxPrev = document.getElementById("lightbox-prev");
+    const lightboxNext = document.getElementById("lightbox-next");
+    const lightboxCounter = document.getElementById("lightbox-counter");
+
+
+    let currentGallery = null;
+    let currentPhoto = 0;
+
+
+    function openPhoto(gallery, index) {
+
+        currentGallery = gallery;
+        currentPhoto = index;
+
+        showPhoto();
+
+        lightbox.style.display = "flex";
+    }
+
+
+    function showPhoto() {
+
+        const photos = galleries[currentGallery].photos;
+
+        lightboxImage.src = photos[currentPhoto];
+
+        lightboxCounter.textContent =
+            `${currentPhoto + 1} / ${photos.length}`;
+    }
+
+
+    function nextPhoto() {
+
+        const photos = galleries[currentGallery].photos;
+
+        currentPhoto++;
+
+        if (currentPhoto >= photos.length) {
+            currentPhoto = 0;
+        }
+
+        showPhoto();
+    }
+
+
+    function previousPhoto() {
+
+        const photos = galleries[currentGallery].photos;
+
+        currentPhoto--;
+
+        if (currentPhoto < 0) {
+            currentPhoto = photos.length - 1;
+        }
+
+        showPhoto();
+    }
+
+
+    for (const galleryName in galleries) {
+
+        const gallery = galleries[galleryName];
+
+        gallery.photos.forEach((photo, index) => {
+
+            const img = document.createElement("img");
+
+            img.src = photo;
+            img.alt = galleryName + " Photograph";
+
+            img.addEventListener("click", () => {
+                openPhoto(galleryName, index);
+            });
+
+            gallery.galleryElement.appendChild(img);
+
+        });
+
+    }
+
+
+    lightboxNext.addEventListener("click", nextPhoto);
+
+    lightboxPrev.addEventListener("click", previousPhoto);
+
+
+    lightboxClose.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+
+    document.addEventListener("keydown", (event) => {
+
+        if (lightbox.style.display !== "flex") {
+            return;
+        }
+
+        if (event.key === "ArrowRight") {
+            nextPhoto();
+        }
+
+        if (event.key === "ArrowLeft") {
+            previousPhoto();
+        }
+
+        if (event.key === "Escape") {
+            lightbox.style.display = "none";
+        }
+
+    });
+
+</script>
 
 	</body>
 </html>
