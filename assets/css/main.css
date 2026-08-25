@@ -4948,3 +4948,16 @@ textarea:focus {
     border-color: #2b8f2f;
     box-shadow: 0 0 0 1px #2b8f2f;
 }
+
+/* Keep the current page tab consistent with the main-page background. */
+#nav ul.links li.active a,
+#nav ul.links li.active a:hover {
+    background-color: #e9eeea;
+    color: #172219 !important;
+}
+
+/* The two horizontal rules flanking dates such as “Welcome”. */
+#main header.major > .date:before,
+#main header.major > .date:after {
+    border-top-color: #9fb5a5;
+}
