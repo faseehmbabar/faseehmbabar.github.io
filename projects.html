@@ -6,26 +6,15 @@
 -->
 <html>
 	<head>
-		<script>
-		(function() {
-			try {
-				var stored = localStorage.getItem('theme');
-				var theme = stored | | (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-				document.documentElement.setAttribute('data-theme', theme);
-			} catch (e) {}
-		})();
-		</script>
-		<title>Faseeh Babar - Author, Writer &amp; Creator</title>
+		<title>CS Projects | Faseeh Babar</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Official website of Faseeh Babar, author of The Huntsman. Explore his writing, computer science projects, graphic design, and gaming photography." />
+		<meta name="description" content="Learn more about the computer science projects by Faseeh Babar." />
 		<meta name="author" content="Faseeh Babar" />
 		<link rel="icon" href="images/favicon.png" type="image/png" />
-		<link rel="canonical" href="https://faseehmbabar.github.io/" />
+		<link rel="canonical" href="https://faseehmbabar.github.io/projects.html" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="assets/css/theme-dark.css" />
-
 		<style>
   			@font-face {
     			font-display: block;
@@ -86,17 +75,7 @@
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Faseeh Babar</h1>
-						<p>Author of <em>The Huntsman</em>.<br />
-						Computer Science student, designer, and creator documenting my journey through stories, software, and creativity.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
@@ -106,7 +85,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li><a href="about.html">About</a></li>
 							<li><a href="portfolio.html">Portfolio</a></li>
 						</ul>
@@ -115,105 +94,60 @@
 							<li><a href="https://discordapp.com/users/881889979343700059" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
 							<li><a href="https://facebook.com/faseeh.m.babar" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="https://instagram.com/faseeh.m.babar" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li>
-								<button type="button" id="theme-toggle" class="icon solid fa-moon" aria-pressed="false">
-									<span class="label">Toggle dark mode</span>
-								</button>
-							</li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Featured Post -->
-							<article class="post featured">
+						<!-- Project 1 -->
+							<section class="post">
 								<header class="major">
 									<span class="date">Welcome</span>
-									<h2><a href="generic.html">About<br />
-									Me</a></h2>
-									<p>Hi there! I'm Faseeh M. Babar, a Computer Science student with a passion for storytelling, technology, graphic design, and gaming. Whether I'm writing fantasy novels, building software, creating digital artwork, or capturing moments in games, I love bringing ideas to life.</p>
+
+									<h1>CS Projects</h1>
+									<p>Explore my computer science projects and contributions. You may also find the GitHub repository links below.</p>
 								</header>
-								<a href="generic.html" class="image main"><img src="images/pic01.jpg" alt="Faseeh M. Babar author profile" /></a>
-								<ul class="actions special">
-									<li><a href="generic.html" class="button large">More About Me</a></li>
-								</ul>
-							</article>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">Novels</span>
-										<h2><a href="books.html">The Huntsman</a></h2>
-									</header>
-									<a href="books.html" class="image fit"><img src="images/pic02.jpg" alt="The Huntsman dark fantasy novel" /></a>
-									<p>The Huntsman is my debut dark fantasy novel, a tale of mystery and adventure in a world where the line between hero and villain is blurred, and each choice has consequences.</p>
-									<ul class="actions special">
-										<li><a href="books.html" class="button">Learn More</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Portfolio</span>
-										<h2><a href="projects.html">CS Projects</a></h2>
-									</header>
-									<a href="projects.html" class="image fit"><img src="images/pic03.jpg" alt="Computer Science projects by Faseeh Babar" /></a>
-									<p>A collection of programming projects documenting my journey as a Computer Science student. From beginner experiments to complete applications, every project represents a step forward in my growth as a developer.</p>
-									<ul class="actions special">
-										<li><a href="projects.html" class="button">View Projects</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Creative</span>
-										<h2><a href="#">Graphic Designs</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="Graphic design work by Faseeh Babar" /></a>
-									<p>From cinematic posters and book covers to photo manipulations and social media artwork, I enjoy turning ideas into visually striking designs using Affinity and other creative tools.</p>
-									<ul class="actions special">
-										<li><a href="coming-soon.html" class="button">View Designs</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Photography</span>
-										<h2><a href="photography.html">Gaming Photography</a></h2>
-									</header>
-									<a href="photography.html" class="image fit"><img src="images/pic05.jpg" alt="Gaming photography by Faseeh Babar" /></a>
-									<p>I love capturing cinematic moments in video games through virtual photography, combining composition, lighting, and storytelling to create images that feel like movie scenes.</p>
-									<ul class="actions special">
-										<li><a href="photography.html" class="button">View Gallery</a></li>
-									</ul>
-								</article>
-								<!-- Community
-								<article>
-									<header>
-										<span class="date">Community</span>
-										<h2><a href="#">Reader Reviews</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>A collection of reviews, feedback, and thoughts from readers who have explored my work. Every review helps me grow as a writer and storyteller.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Read Reviews</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Community</span>
-										<h2><a href="#">Fan Creations</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>A showcase of fan art, fan fiction, and other creative works inspired by my stories. I love seeing readers bring characters and worlds to life in their own unique way.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">View Fan Creations</a></li>
-									</ul>
-								</article>
-							    -->
+								<div class="row">
+									<div class="col-4 col-12-small">
+										<span class="image fit">
+											<img src="images/website-macbook.jpg" alt="Preview of my personal website" />
+										</span>
+									</div>
+
+									<div class="col-8 col-12-small">
+										<h2>Author Website</h2>
+										<p>After publishing "The Huntsman", I wanted to create a place where readers could learn more about the book, find my work, and follow my journey as a writer. So I decided to build the website myself. I designed and developed my personal author portfolio using HTML, CSS, and JavaScript, customized the entire site to fit my identity as an author and a CS enthusiast, and set it up with GitHub Pages domain and GitHub repository. It also gave me a chance to learn more about things beyond just writing code, from responsive design and SEO to deployment and maintaining a real website.</p>
+
+										<ul class="actions">
+											<li><a href="https://github.com/faseehmbabar/faseehmbabar.github.io" class="button">View on GitHub</a></li>
+										</ul>
+									</div>
+								</div>								
 							</section>
-					</div>
 
-				<!-- Footer -->
+						<!-- Project 2 -->
+							<section class="post">
+								<div class="row">
+									<div class="col-4 col-12-small">
+										<span class="image fit">
+											<img src="images/searx.jpg" alt="Preview of my private search engine" />
+										</span>
+									</div>
+
+									<div class="col-8 col-12-small">
+										<h2>Private Search Engine</h2>
+										<p>I set up a self-hosted search environment using SearXNG and Docker Desktop, giving me a private and customizable alternative to traditional search platforms. The project involved configuring the SearXNG container environment, generating a secure instance secret, managing environment variables, and deploying the service through Docker Compose. I also documented the entire setup process in my GitHub repository, including the configuration and commands required to reproduce the environment from scratch.</p>
+
+										<ul class="actions">
+											<li><a href="https://github.com/faseehmbabar/private-searxng-infrastructure" class="button">View on GitHub</a></li>
+										</ul>
+									</div>
+								</div>								
+							</section>
+
+					<!-- Footer -->
 					<footer id="footer">
 						<section>
 							<div class="sib-form" style="text-align: center;
@@ -283,11 +217,10 @@
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="https://github.com/faseehmbabar" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 									<li><a href="https://discordapp.com/users/881889979343700059" class="icon brands alt fa-discord"><span class="label">Discord</span></a></li>
 									<li><a href="https://facebook.com/faseeh.m.babar" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
 									<li><a href="https://instagram.com/faseeh.m.babar" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									
+									<li><a href="https://github.com/faseehmbabar" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</section>
 						</section>
@@ -308,28 +241,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/theme.js"></script>
 
-			<script>
-  				window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-  				window.LOCALE = 'en';
-  				window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  				window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-  				window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  				window.INVALID_NUMBER = "The information provided is invalid. Please review the field format and try again.";
-  				window.INVALID_DATE = "Please enter a valid date";
-  				window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
-  				window.translation = {
-    				common: {
-      					selectedList: '{quantity} list selected',
-      					selectedLists: '{quantity} lists selected',
-      					selectedOption: '{quantity} selected',
-      					selectedOptions: '{quantity} selected',
-    				}
-  				};
-  				var AUTOHIDE = Boolean(1);
-			</script>
-			<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-			<script src="https://www.google.com/recaptcha/api.js?render=6LcJTZYtAAAAACTpxKKW1OqyfMGdcH_2gLSbuCvX&hl=en" async defer></script>
 	</body>
 </html>
