@@ -6,6 +6,15 @@
 -->
 <html>
 	<head>
+		<script>
+		(function() {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = stored | | (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+				document.documentElement.setAttribute('data-theme', theme);
+			} catch (e) {}
+		})();
+		</script>
 		<title>Gaming Photography | Faseeh Babar</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,6 +24,7 @@
 		<link rel="canonical" href="https://faseehmbabar.github.io/photography.html" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/theme-dark.css" />
         <style>
   			@font-face {
     			font-display: block;
@@ -229,7 +239,8 @@
     		<div id="lightbox-counter"></div>
 		</div>
 
-		<!-- Scripts -->
+<!-- Scripts -->
+<script src="assets/js/theme.js"></script>
 <script>
 
     const galleries = {

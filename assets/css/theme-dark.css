@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Dark mode — loaded AFTER main.css and noscript.css on every page.
+   Activates when <html data-theme="dark">, set by the inline script in
+   <head> and toggled by assets/js/theme.js.
+
+   NOTE: #header / #nav are left untouched on purpose — they always sit on
+   top of the dark hero background image (#wrapper > .bg), so their text is
+   already white in both themes. Only the light "card" surfaces (#main,
+   #footer, forms) need a dark variant.
+   ========================================================================== */
+
+/* --- Theme-toggle button reset (applies in both themes) --- */
+/* --- Theme-toggle button reset (applies in both themes) --- */
+#theme-toggle {
+	-webkit-appearance: none;
+	appearance: none;
+	background: none;
+	border: 0;
+	outline: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	line-height: inherit;
+	color: #ffffff;
+	font: inherit;
+	cursor: pointer;
+}
+
+#theme-toggle:hover:before,
+#theme-toggle:focus-visible:before {
+	color: #2ed933 !important;
+}
+
+/* --- Dark palette --- */
+
+html[data-theme="dark"] body {
+	background-color: #14181a;
+	color: #dfe3e0;
+}
+
+html[data-theme="dark"] #main {
+	background-color: #14181a;
+}
+
+html[data-theme="dark"] #main h1,
+html[data-theme="dark"] #main h2,
+html[data-theme="dark"] #main h3,
+html[data-theme="dark"] #main h4,
+html[data-theme="dark"] #main h5,
+html[data-theme="dark"] #main h6 {
+	color: #3fd946;
+}
+
+html[data-theme="dark"] #main a {
+	color: #3fd946;
+	border-bottom-color: rgba(63, 217, 70, 0.5);
+}
+
+html[data-theme="dark"] #footer {
+	background-color: #1a1f1c;
+	color: #dfe3e0;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] #footer input,
+html[data-theme="dark"] #footer select,
+html[data-theme="dark"] #footer textarea {
+	color: #dfe3e0;
+}
+
+html[data-theme="dark"] #footer h1,
+html[data-theme="dark"] #footer h2,
+html[data-theme="dark"] #footer h3,
+html[data-theme="dark"] #footer h4,
+html[data-theme="dark"] #footer h5,
+html[data-theme="dark"] #footer h6,
+html[data-theme="dark"] #footer a,
+html[data-theme="dark"] #footer ul.icons.alt li .icon:before {
+	color: #dfe3e0;
+}
+
+html[data-theme="dark"] #footer a {
+	border-bottom-color: rgba(223, 227, 224, 0.35);
+}
+
+html[data-theme="dark"] #footer a:hover,
+html[data-theme="dark"] #footer ul.icons.alt li a.icon:hover:before {
+	color: #2ed933 !important;
+	border-color: #2ed933;
+}
+
+html[data-theme="dark"] #footer ul.icons.alt li .icon:before {
+	box-shadow: inset 0 0 0 2px #33403a;
+}
+
+/* Borders */
+html[data-theme="dark"] #main > *,
+html[data-theme="dark"] #main > .posts > article {
+	border-color: #2f3a34;
+}
+
+html[data-theme="dark"] #footer > section,
+html[data-theme="dark"] #footer > section.split > section {
+	border-color: #283029;
+}
+
+html[data-theme="dark"] #main header.major > .date:before,
+html[data-theme="dark"] #main header.major > .date:after {
+	border-top-color: #2f3a34;
+}
+
+/* Form fields (the newsletter form + coming-soon.html contact form) */
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] input[type="password"],
+html[data-theme="dark"] input[type="email"],
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+	background-color: #1f2422;
+	border-color: #3a453e;
+	color: #dfe3e0;
+}
+
+/* Buttons keep their green accent — it already has good contrast on dark */
+html[data-theme="dark"] input[type="submit"],
+html[data-theme="dark"] input[type="reset"],
+html[data-theme="dark"] input[type="button"],
+html[data-theme="dark"] button,
+html[data-theme="dark"] .button {
+	color: #3fd946 !important;
+	box-shadow: inset 0 0 0 2px #3fd946;
+}
+
+/* "Current page" pill in the nav — must match the new dark #main background */
+html[data-theme="dark"] #nav ul.links li.active a,
+html[data-theme="dark"] #nav ul.links li.active a:hover {
+	background-color: #14181a;
+	color: #dfe3e0 !important;
+}
