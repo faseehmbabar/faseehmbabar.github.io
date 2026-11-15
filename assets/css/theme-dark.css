@@ -1,7 +1,6 @@
 /* ==========================================================================
    Dark mode — loaded AFTER main.css and noscript.css on every page.
-   Activates when <html data-theme="dark">, set by the inline script in
-   <head> and toggled by assets/js/theme.js.
+   Enabled on every HTML page with the fixed data-theme attribute.
 
    NOTE: #header / #nav are left untouched on purpose — they always sit on
    top of the dark hero background image (#wrapper > .bg), so their text is
@@ -9,29 +8,11 @@
    #footer, forms) need a dark variant.
    ========================================================================== */
 
-/* --- Theme-toggle button reset (applies in both themes) --- */
-/* --- Theme-toggle button reset (applies in both themes) --- */
-#theme-toggle {
-	-webkit-appearance: none;
-	appearance: none;
-	background: none;
-	border: 0;
-	outline: none;
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-	line-height: inherit;
-	color: #ffffff;
-	font: inherit;
-	cursor: pointer;
-}
-
-#theme-toggle:hover:before,
-#theme-toggle:focus-visible:before {
-	color: #2ed933 !important;
-}
-
 /* --- Dark palette --- */
+
+html {
+	color-scheme: dark;
+}
 
 html[data-theme="dark"] body {
 	background-color: #14181a;
@@ -138,4 +119,131 @@ html[data-theme="dark"] #nav ul.links li.active a,
 html[data-theme="dark"] #nav ul.links li.active a:hover {
 	background-color: #14181a;
 	color: #dfe3e0 !important;
+}
+
+/* The newsletter widget uses inline light colors from its provider. */
+html[data-theme="dark"] .sib-form,
+html[data-theme="dark"] #sib-form-container,
+html[data-theme="dark"] #sib-container {
+	background-color: #14181a !important;
+	color: #dfe3e0 !important;
+}
+
+html[data-theme="dark"] #sib-container h2,
+html[data-theme="dark"] #sib-container p,
+html[data-theme="dark"] #sib-container label {
+	color: #dfe3e0 !important;
+}
+
+html[data-theme="dark"] #sib-container .entry__field input {
+	background-color: #1f2422 !important;
+	border-color: #3a453e !important;
+	color: #dfe3e0 !important;
+}
+
+/* Homepage feature: contained portrait beside the introduction. */
+html[data-theme="dark"] #main > .post.featured {
+	display: grid;
+	grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+	grid-template-rows: auto minmax(18rem, auto);
+	align-items: center;
+	column-gap: clamp(2rem, 5vw, 4rem);
+	row-gap: 2rem;
+	padding: 4rem;
+}
+
+html[data-theme="dark"] #main > .post.featured > header.feature-kicker {
+	grid-column: 1 / -1;
+	grid-row: 1;
+	width: 100%;
+	margin: 0;
+}
+
+html[data-theme="dark"] #main > .post.featured > header.feature-kicker > .date {
+	margin: 0;
+}
+
+html[data-theme="dark"] #main > .post.featured > .feature-copy {
+	grid-column: 2;
+	grid-row: 2;
+	text-align: left;
+}
+
+html[data-theme="dark"] #main > .post.featured > .feature-copy h2 {
+	white-space: nowrap;
+	margin: 0 0 1.5rem;
+}
+
+html[data-theme="dark"] #main > .post.featured > .feature-copy p {
+	text-align: left;
+}
+
+html[data-theme="dark"] #main > .post.featured > .image.main {
+	grid-column: 1;
+	grid-row: 2;
+	justify-self: center;
+	width: 100%;
+	max-width: 22rem;
+	height: min(30rem, 42vw);
+	min-height: 18rem;
+	margin: 0;
+	overflow: hidden;
+}
+
+html[data-theme="dark"] #main > .post.featured > .image.main img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+html[data-theme="dark"] #main > .post.featured > .feature-copy > ul.actions {
+	justify-content: flex-start;
+	margin: 1rem 0 0;
+}
+
+/* About portrait: cap its width instead of stretching across the article. */
+html[data-theme="dark"] #main .about-portrait.image.main {
+	width: min(100%, 22rem);
+	margin: 2rem auto;
+}
+
+html[data-theme="dark"] #main .about-portrait.image.main img {
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (max-width: 736px) {
+	html[data-theme="dark"] #main > .post.featured {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: auto auto auto;
+		gap: 1.5rem;
+		padding: 3rem 2rem 2rem;
+	}
+
+	html[data-theme="dark"] #main > .post.featured > header.feature-kicker {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	html[data-theme="dark"] #main > .post.featured > .image.main {
+		grid-column: 1;
+		grid-row: 2;
+		width: min(100%, 22rem);
+		height: min(28rem, 85vw);
+		min-height: 0;
+	}
+
+	html[data-theme="dark"] #main > .post.featured > .feature-copy {
+		grid-column: 1;
+		grid-row: 3;
+	}
+
+	html[data-theme="dark"] #main > .post.featured > .feature-copy h2 {
+		font-size: 2.5rem;
+	}
+
+	html[data-theme="dark"] #main > .post.featured > .feature-copy > ul.actions {
+		margin-top: 0;
+	}
 }

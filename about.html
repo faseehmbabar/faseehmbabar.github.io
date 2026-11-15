@@ -4,19 +4,11 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html data-theme="dark">
 	<head>
-		<script>
-		(function() {
-			try {
-				var stored = localStorage.getItem('theme');
-				var theme = stored | | (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-				document.documentElement.setAttribute('data-theme', theme);
-			} catch (e) {}
-		})();
-		</script>
 		<title>About Faseeh Babar | Author, Writer &amp, Creator</title>
 		<meta charset="utf-8" />
+		<meta name="color-scheme" content="dark" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Learn more about Faseeh Babar, author of The Huntsman, and explore his journey as a Computer Science student, designer, and creator." />
 		<meta name="author" content="Faseeh Babar" />
@@ -104,11 +96,6 @@
 							<li><a href="https://discordapp.com/users/881889979343700059" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
 							<li><a href="https://facebook.com/faseeh.m.babar" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="https://instagram.com/faseeh.m.babar" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li>
-								<button type="button" id="theme-toggle" class="icon solid fa-moon" aria-pressed="false">
-									<span class="label">Toggle dark mode</span>
-								</button>
-							</li>
 						</ul>
 					</nav>
 
@@ -126,7 +113,7 @@
                                      I enjoy creating things—whether it's a fantasy novel, a software
     						        project, a cinematic game screenshot, or a digital artwork.</p>
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="Faseeh Muhammad Babar" /></div>
+								<div class="image main about-portrait"><img src="images/pic01.jpg" alt="Faseeh Muhammad Babar" /></div>
 								<h2>My Story</h2>
 								<p> I've always enjoyed creating things. My journey started with a ghazal, then I switched to writing fantasy stories before expanding into graphic design, programming, and web development. Apart from that I research and experiment with multiple techniques regarding <em>Lucid Dreams</em>, creating my own theories and methods. Every new skill has become another way to bring ideas to life.</p>
 								<h2>Writing</h2>
@@ -233,7 +220,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/theme.js"></script>
 
 	</body>
 </html>

@@ -4,19 +4,11 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html data-theme="dark">
 	<head>
-		<script>
-		(function() {
-			try {
-				var stored = localStorage.getItem('theme');
-				var theme = stored | | (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-				document.documentElement.setAttribute('data-theme', theme);
-			} catch (e) {}
-		})();
-		</script>
 		<title>Faseeh Babar - Author, Writer &amp; Creator</title>
 		<meta charset="utf-8" />
+		<meta name="color-scheme" content="dark" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Official website of Faseeh Babar, author of The Huntsman. Explore his writing, computer science projects, graphic design, and gaming photography." />
 		<meta name="author" content="Faseeh Babar" />
@@ -115,11 +107,6 @@
 							<li><a href="https://discordapp.com/users/881889979343700059" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
 							<li><a href="https://facebook.com/faseeh.m.babar" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="https://instagram.com/faseeh.m.babar" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li>
-								<button type="button" id="theme-toggle" class="icon solid fa-moon" aria-pressed="false">
-									<span class="label">Toggle dark mode</span>
-								</button>
-							</li>
 						</ul>
 					</nav>
 
@@ -128,16 +115,17 @@
 
 						<!-- Featured Post -->
 							<article class="post featured">
-								<header class="major">
+								<header class="major feature-kicker">
 									<span class="date">Welcome</span>
-									<h2><a href="generic.html">About<br />
-									Me</a></h2>
-									<p>Hi there! I'm Faseeh M. Babar, a Computer Science student with a passion for storytelling, technology, graphic design, and gaming. Whether I'm writing fantasy novels, building software, creating digital artwork, or capturing moments in games, I love bringing ideas to life.</p>
 								</header>
-								<a href="generic.html" class="image main"><img src="images/pic01.jpg" alt="Faseeh M. Babar author profile" /></a>
-								<ul class="actions special">
-									<li><a href="generic.html" class="button large">More About Me</a></li>
-								</ul>
+								<div class="feature-copy">
+									<h2><a href="about.html">About Me</a></h2>
+									<p>Hi there! I'm Faseeh M. Babar, a Computer Science student with a passion for storytelling, technology, graphic design, and gaming. Whether I'm writing fantasy novels, building software, creating digital artwork, or capturing moments in games, I love bringing ideas to life.</p>
+									<ul class="actions special">
+										<li><a href="about.html" class="button large">More About Me</a></li>
+									</ul>
+								</div>
+								<a href="about.html" class="image main"><img src="images/pic01.jpg" alt="Faseeh M. Babar author profile" /></a>
 							</article>
 
 						<!-- Posts -->
@@ -308,7 +296,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/theme.js"></script>
 
 			<script>
   				window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
